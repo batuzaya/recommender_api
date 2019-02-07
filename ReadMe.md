@@ -88,24 +88,19 @@ The api has 3 endpoints:
     {
         "items": [
             {
-                "item_id": 12,
-                "user_id": 1
+                "item_id": 12
             },
             {
-                "item_id": 14,
-                "user_id": 1
+                "item_id": 14
             },
             {
-                "item_id": 32,
-                "user_id": 1
+                "item_id": 32
             },
             {
-                "item_id": 48,
-                "user_id": 1
+                "item_id": 48
             },
             {
-                "item_id": 60,
-                "user_id": 1
+                "item_id": 60
             }
         ],
         "success": 1

@@ -20,7 +20,7 @@ class Ranking(db.Model):
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
-            'user_id': self.user_id,
+            # 'user_id': self.user_id,
             'item_id': self.item_id
         }
 
