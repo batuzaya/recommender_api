@@ -2,7 +2,7 @@ import MySQLdb
 from os import getenv
 from daemon.config import *
 
-if getenv('FLASK_ENV') == 'production':
+if getenv('ENV') == 'production':
     config = ProductionConfig()
 else:
     config = DevelopmentConfig()
