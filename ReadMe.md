@@ -57,3 +57,57 @@ Along with the remote database, the daemon also uses the same local database as 
 When deploying to production, ensure the following environment variables are set:
 
 * `ENV` - Must be set to "production". Used to switch to the production configuration.
+
+API specs
+=========
+The api has 3 endpoints:
+* `/api/segmentation` - Returns RFM classes of all users as in the following format.
+```bash
+    [
+        {
+            "F_Quartile": 2,
+            "M_Quartile": 3,
+            "RFMClass": "423",
+            "R_Quartile": 4,
+            "user_id": 1
+        },
+        ...
+    ]
+```
+* `/api/segmentation/<int:user_id>` - Returns a RFM class for the user as in the following format.
+```bash
+    {
+        "F_Quartile": 2,
+        "M_Quartile": 3,
+        "RFMClass": "423",
+        "R_Quartile": 4
+    }
+```
+* `/api/ranking/<int:user_id>` - Returns the top 5 recommended items for the user.
+```bash
+    {
+        "items": [
+            {
+                "item_id": 12,
+                "user_id": 1
+            },
+            {
+                "item_id": 14,
+                "user_id": 1
+            },
+            {
+                "item_id": 32,
+                "user_id": 1
+            },
+            {
+                "item_id": 48,
+                "user_id": 1
+            },
+            {
+                "item_id": 60,
+                "user_id": 1
+            }
+        ],
+        "success": 1
+    }
+```
